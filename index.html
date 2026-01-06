@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MindTap Learning Hub | Trusted Tutors in Abuja</title>
+
+<meta name="description" content="MindTap Learning Hub provides premium Math & Science tutoring in Abuja. Home & online lessons, exam preparation, trusted tutors.">
+<meta name="keywords" content="Math tutor Abuja, Science tutor Abuja, WAEC tutor, JAMB tutor, Home lessons Abuja">
+<meta name="author" content="MindTap Learning Hub">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#0f172a;
+  --accent:#f59e0b;
+  --light:#f8fafc;
+  --dark:#020617;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
+body{background:var(--light);color:#1e293b;line-height:1.7;}
+section{padding:4rem 1.5rem;max-width:1200px;margin:auto;}
+h2{text-align:center;margin-bottom:2.5rem;color:var(--primary);}
+.card{background:#fff;padding:2rem;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.08);}
+
+header{
+  background:var(--primary);
+  color:#fff;
+  padding:1rem 2rem;
+  position:sticky;
+  top:0;
+}
+.logo{font-size:1.5rem;font-weight:700;color:var(--accent);}
+
+.hero{
+  min-height:90vh;
+  background:linear-gradient(rgba(2,6,23,.75),rgba(2,6,23,.75)),
+  url("https://images.unsplash.com/photo-1588072432836-e10032774350") center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+}
+.hero h1{font-size:clamp(2.3rem,4vw,3.2rem);}
+.hero p{max-width:720px;margin:1.5rem auto;}
+.btn{
+  background:var(--accent);
+  color:#fff;
+  padding:1rem 2.5rem;
+  border-radius:30px;
+  font-weight:700;
+  display:inline-block;
+}
+
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;}
+
+/* FORMS */
+input, select, textarea{
+  width:100%;
+  padding:1rem;
+  margin-bottom:1rem;
+  border-radius:10px;
+  border:1px solid #cbd5e1;
+}
+button{border:none;cursor:pointer}
+
+/* FOOTER */
+footer{
+  background:var(--dark);
+  color:#fff;
+  padding:3rem 1.5rem;
+}
+.socials a{margin-right:1rem;font-size:1.5rem;color:var(--accent);}
+
+/* WHATSAPP */
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  color:#fff;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:2rem;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">MindTap Learning Hub</div>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Building Academic Confidence That Lasts</h1>
+    <p>Trusted home & online tutoring for children and students preparing for Nigerian and international exams.</p>
+    <a href="#parent-form" class="btn">Book Diagnostic Session</a>
+  </div>
+</section>
+
+<!-- CHALLENGES -->
+<section>
+<h2>Challenges Students Face</h2>
+<div class="grid">
+  <div class="card">Poor foundation in Math & Science</div>
+  <div class="card">Fear of exams and low confidence</div>
+  <div class="card">Large classroom attention gaps</div>
+  <div class="card">Lack of structured revision plans</div>
+</div>
+</section>
+
+<!-- SOLUTIONS -->
+<section>
+<h2>How MindTap Solves These</h2>
+<div class="grid">
+  <div class="card">One-on-one personalised teaching</div>
+  <div class="card">Diagnostic assessment before lessons</div>
+  <div class="card">Carefully matched tutors</div>
+  <div class="card">Progress tracking & parent feedback</div>
+</div>
+</section>
+
+<!-- PRICING -->
+<section>
+<h2>Lesson Pricing</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Home Lessons</h3>
+    <p><strong>₦8,000 – ₦12,000</strong> per session</p>
+  </div>
+  <div class="card">
+    <h3>Online Lessons</h3>
+    <p><strong>₦5,000 – ₦8,000</strong> per session</p>
+  </div>
+</div>
+<p style="text-align:center;margin-top:1rem;">Final pricing depends on class level and subject.</p>
+</section>
+
+<!-- FAQ -->
+<section>
+<h2>Frequently Asked Questions</h2>
+<div class="card">
+<p><strong>How long is a lesson?</strong><br>Each session lasts 60–90 minutes.</p><br>
+<p><strong>Do you offer trial lessons?</strong><br>Yes. A diagnostic session helps us assess the student before full enrolment.</p><br>
+<p><strong>What ages do you teach?</strong><br>Primary, secondary and university levels.</p><br>
+<p><strong>Online or home lessons?</strong><br>We offer both. Parents choose what works best.</p>
+</div>
+</section>
+
+<!-- PARENT FORM -->
+<section id="parent-form">
+<h2>Register Your Child</h2>
+<form action="https://formspree.io/f/mjgkzpvv" method="POST" class="card">
+<input type="text" name="parent_name" placeholder="Parent Full Name" required>
+<input type="tel" name="phone" placeholder="Phone / WhatsApp" required>
+<input type="text" name="student" placeholder="Student Name & Class" required>
+<select name="lesson_type" required>
+<option value="">Lesson Type</option>
+<option>Home Lesson</option>
+<option>Online Lesson</option>
+</select>
+<textarea name="message" placeholder="Academic concerns or goals" required></textarea>
+<input type="hidden" name="_subject" value="New Student Registration">
+<button class="btn">Submit & Get Confirmation</button>
+</form>
+</section>
+
+<!-- TUTOR FORM -->
+<section>
+<h2>Become a MindTap Tutor</h2>
+<p style="text-align:center;">All tutors are vetted, trained and monitored for quality.</p>
+<form action="https://formspree.io/f/mjgkzpvv" method="POST" class="card">
+<input type="text" name="tutor_name" placeholder="Full Name" required>
+<input type="email" name="email" placeholder="Email Address" required>
+<input type="text" name="qualification" placeholder="Qualification & Subjects" required>
+<textarea name="experience" placeholder="Teaching experience" required></textarea>
+<input type="hidden" name="_subject" value="Tutor Application">
+<button class="btn">Apply as Tutor</button>
+</form>
+</section>
+
+<footer>
+<p>© 2026 MindTap Learning Hub | Abuja, Nigeria</p>
+<p>Email: mindtapconsult@gmail.com</p>
+<div class="socials">
+  <a href="https://wa.me/2348103795347" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://instagram.com/YOURPAGE" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://tiktok.com/@YOURPAGE" target="_blank"><i class="fab fa-tiktok"></i></a>
+  <a href="https://facebook.com/YOURPAGE" target="_blank"><i class="fab fa-facebook"></i></a>
+</div>
+</footer>
+
+<a href="https://wa.me/2348103795347" class="whatsapp-float" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
