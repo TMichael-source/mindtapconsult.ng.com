@@ -6,8 +6,8 @@
 
 <title>MindTap Consult | Trusted Home & Online Tutors in Abuja</title>
 
-<meta name="description" content="MindTap Consult offers trusted Math & Science tutoring in Abuja. Founded by an experienced educator with a proven exam success record.">
-<meta name="keywords" content="Math tutor Abuja, Science tutor Abuja, Home lessons Abuja, WAEC tutor, JAMB tutor, online tutoring">
+<meta name="description" content="MindTap Consult offers trusted tutoring in a wide range of subjects in Abuja. Founded by an experienced educator with a proven success record.">
+<meta name="keywords" content="Math tutor Abuja, Science tutor Abuja, Accounting tutor Abuja, Biology tutor Abuja, Commerce tutor Abuja, IELTS, GCE, NABTEB, Home lessons Abuja, online tutoring">
 <meta name="author" content="MindTap Consult">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -134,6 +134,22 @@ footer{
   margin-top:10px;
 }
 input, select, textarea{width:100%; padding:0.8rem; border-radius:10px; border:1px solid #ccc;}
+
+/* NEW: Services Table */
+.services-table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:2rem;
+}
+.services-table th, .services-table td{
+  padding:1rem;
+  border:1px solid #ccc;
+  text-align:left;
+}
+.services-table th{
+  background:var(--primary);
+  color:#fff;
+}
 </style>
 </head>
 
@@ -144,9 +160,11 @@ input, select, textarea{width:100%; padding:0.8rem; border-radius:10px; border:1
   <nav>
     <ul>
       <li><a href="#founder">Founder</a></li>
+      <li><a href="#services">Services</a></li> <!-- NEW -->
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact">Register</a></li>
+      <li><a href="#tutor">Become a Tutor</a></li> <!-- NEW -->
       <li><a href="#testimonials">Testimonials</a></li>
     </ul>
   </nav>
@@ -155,7 +173,7 @@ input, select, textarea{width:100%; padding:0.8rem; border-radius:10px; border:1
 <section class="hero">
   <div>
     <h1>Building Academic Confidence That Lasts</h1>
-    <p>Expert-led Math & Science tutoring for primary, secondary and university students in Abuja.</p>
+    <p>Expert-led tutoring for primary, secondary, and university students in a wide range of subjects including Accounting, Biology, Commerce, Math, and English.</p>
     <a href="https://wa.me/2348103795347" class="btn">Chat on WhatsApp</a>
   </div>
 </section>
@@ -173,7 +191,7 @@ input, select, textarea{width:100%; padding:0.8rem; border-radius:10px; border:1
   <div>
     <h3>Michael Tope Olaseigbe</h3>
     <p><strong>Founder & Academic Director, MindTap Consult</strong></p>
-    <p>Graduate of Pure Chemistry with over six years of experience preparing students for WAEC, NECO, JAMB and Common Entrance.</p>
+    <p>Graduate of Pure Chemistry with over six years of experience preparing students for WAEC, NECO, JAMB, GCE, NABTEB, IELTS and other local & international exams.</p>
     <p>Known for clarity, patience, and consistent academic results.</p>
   </div>
 </div>
@@ -184,16 +202,58 @@ input, select, textarea{width:100%; padding:0.8rem; border-radius:10px; border:1
 </div>
 </section>
 
+<!-- NEW: Services Section -->
+<section id="services">
+<h2>Our Services & Prices (Abuja Standard)</h2>
+<table class="services-table">
+  <tr>
+    <th>Subject / Exam</th>
+    <th>Price per Hour (₦)</th>
+  </tr>
+  <tr><td>Mathematics</td><td>7,000</td></tr>
+  <tr><td>Science (Physics, Chemistry, Biology)</td><td>7,500</td></tr>
+  <tr><td>Accounting</td><td>8,000</td></tr>
+  <tr><td>Commerce / Business Studies</td><td>7,500</td></tr>
+  <tr><td>English Language</td><td>6,500</td></tr>
+  <tr><td>IELTS</td><td>10,000</td></tr>
+  <tr><td>GCE</td><td>9,000</td></tr>
+  <tr><td>NABTEB</td><td>7,500</td></tr>
+  <tr><td>Other Local/International Exams</td><td>Varies</td></tr>
+</table>
+</section>
+
+<section id="contact">
+<h2>Register Your Ward</h2>
+<form action="https://formspree.io/f/mjgkzpvv" method="POST" class="card">
+  <input type="text" name="name" placeholder="Parent Name" required><br><br>
+  <input type="email" name="email" placeholder="Email" required><br><br>
+  <textarea name="message" placeholder="Learning needs / Subjects" required></textarea><br><br>
+  <button class="btn">Submit</button>
+</form>
+</section>
+
+<!-- NEW: Tutor Registration Section -->
+<section id="tutor">
+<h2>Become a Tutor</h2>
+<form action="https://formspree.io/f/mjgkzpvv" method="POST" class="card">
+  <input type="text" name="tutor_name" placeholder="Full Name" required><br><br>
+  <input type="email" name="tutor_email" placeholder="Email" required><br><br>
+  <input type="text" name="subjects" placeholder="Subjects you teach" required><br><br>
+  <textarea name="experience" placeholder="Briefly describe your experience" required></textarea><br><br>
+  <button class="btn">Submit</button>
+</form>
+</section>
+
 <section id="testimonials" class="testimonial-carousel">
 <h2>What Parents & Students Say</h2>
 
 <div class="testimonial-slide active">
-  <p>"My son moved from struggling in Mathematics to scoring top grades. MindTap is a blessing."</p>
+  <p>"My son moved from struggling to scoring top grades. MindTap Consult is a blessing."</p>
   <h5>- Mrs. Funke A.</h5>
 </div>
 
 <div class="testimonial-slide">
-  <p>"Professional, patient, and results-driven. WAEC preparation was excellent."</p>
+  <p>"Professional, patient, and results-driven. Tutoring was excellent."</p>
   <h5>- Mr. Chukwudi O.</h5>
 </div>
 
@@ -203,12 +263,12 @@ input, select, textarea{width:100%; padding:0.8rem; border-radius:10px; border:1
 </div>
 
 <div class="testimonial-slide">
-  <p>"Flexible home lessons and consistent feedback. Highly recommended."</p>
+  <p>"Flexible lessons and consistent feedback. Highly recommended."</p>
   <h5>- Mr. Emeka L.</h5>
 </div>
 
 <div class="testimonial-slide">
-  <p>"My JAMB score improved significantly after just two months."</p>
+  <p>"My IELTS score improved significantly after just two months."</p>
   <h5>- Samuel T.</h5>
 </div>
 
@@ -218,7 +278,7 @@ input, select, textarea{width:100%; padding:0.8rem; border-radius:10px; border:1
 </div>
 
 <div class="testimonial-slide">
-  <p>"Reliable online lessons. My child is now confident in Science."</p>
+  <p>"Reliable online lessons. My child is now confident in multiple subjects."</p>
   <h5>- Ahmed S.</h5>
 </div>
 
@@ -231,16 +291,6 @@ input, select, textarea{width:100%; padding:0.8rem; border-radius:10px; border:1
   <button onclick="prevTestimonial()">Prev</button>
   <button onclick="nextTestimonial()">Next</button>
 </div>
-</section>
-
-<section id="contact">
-<h2>Register Your Ward</h2>
-<form action="https://formspree.io/f/mjgkzpvv" method="POST" class="card">
-  <input type="text" name="name" placeholder="Parent Name" required><br><br>
-  <input type="email" name="email" placeholder="Email" required><br><br>
-  <textarea name="message" placeholder="Learning needs" required></textarea><br><br>
-  <button class="btn">Submit</button>
-</form>
 </section>
 
 <footer>
@@ -273,6 +323,9 @@ function prevTestimonial(){
   slideIndex = (slideIndex - 1 + slides.length) % slides.length;
   showSlide(slideIndex);
 }
+
+// AUTO SLIDE every 5 seconds
+setInterval(nextTestimonial, 5000);
 </script>
 
 </body>
