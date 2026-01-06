@@ -75,8 +75,6 @@ section h2{text-align:center;margin-bottom:2.5rem;color:var(--primary);}
   margin-bottom:2rem;
 }
 
-.about-founder, .faq-section, .pricing, .tutor-section, .challenges, .testimonial-carousel{margin-bottom:4rem;}
-
 .philosophy{
   background:var(--primary);
   color:#fff;
@@ -117,43 +115,25 @@ footer{
 
 .faq-item{margin-bottom:1.5rem;}
 .faq-item h4{color:var(--accent);}
-.pricing ul{list-style:disc;padding-left:1.5rem;}
 
 .testimonial-carousel{
-  position:relative;
   max-width:900px;
   margin:auto;
-  overflow:hidden;
-  border-radius:15px;
-  box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 .testimonial-slide{
   display:none;
   padding:2rem;
   background:#fff;
   text-align:center;
+  border-radius:15px;
 }
 .testimonial-slide.active{display:block;}
-.testimonial-slide p{font-style:italic;}
-.testimonial-slide h5{margin-top:1rem;color:var(--primary);}
-.carousel-controls{text-align:center;margin-top:1rem;}
-.carousel-controls button{
-  background:var(--accent);
-  border:none;
-  padding:0.5rem 1rem;
-  margin:0 0.25rem;
-  color:#fff;
-  border-radius:5px;
-  cursor:pointer;
-}
-.carousel-controls button:hover{background:#d97706;}
+
 #price-display{
   font-weight:bold;
   margin-top:10px;
-  color:var(--primary);
 }
 input, select, textarea{width:100%; padding:0.8rem; border-radius:10px; border:1px solid #ccc;}
-textarea{resize:vertical;}
 </style>
 </head>
 
@@ -184,138 +164,68 @@ textarea{resize:vertical;}
 <section id="founder">
 <h2>Meet the Founder</h2>
 
-<div class="about-founder" style="display:flex; gap:2rem; flex-wrap:wrap;">
+<div style="display:flex; gap:2rem; flex-wrap:wrap; align-items:center;">
   <div style="max-width:350px;">
-    <img id="founder-img" src="images/founder.jpg" alt="Michael Tope Olaseigbe" style="width:100%; border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,.15);">
-    <input type="file" id="upload-founder-img" style="margin-top:10px;">
+    <img src="images/founder.jpg" 
+         alt="Michael Tope Olaseigbe"
+         style="width:100%; border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,.15);">
   </div>
 
   <div>
     <h3>Michael Tope Olaseigbe</h3>
     <p><strong>Founder & Academic Director, MindTap Learning Hub</strong></p>
-
-    <p>
-      Michael Tope Olaseigbe is a graduate of <strong>Pure Chemistry</strong> from the
-      <strong>Department of Chemistry, Faculty of Science, Ekiti State University, Ado-Ekiti, Nigeria</strong>.
-    </p>
-
-    <p>
-      With over <strong>six years of hands-on teaching experience</strong>, he has successfully prepared
-      students for major external examinations including <strong>Common Entrance, WAEC, NECO, and JAMB</strong>,
-      helping learners not only pass but excel with confidence.
-    </p>
-
-    <p>
-      His work is defined by patience, clarity, and measurable academic results, earning the trust
-      of parents and students across different learning levels.
-    </p>
+    <p>Graduate of Pure Chemistry, Ekiti State University, with over six years of experience preparing students for WAEC, NECO, JAMB and Common Entrance.</p>
+    <p>His approach emphasizes clarity, confidence-building, and measurable academic success.</p>
   </div>
 </div>
 
 <div class="philosophy">
 <h3>Teaching Philosophy</h3>
-<p>
-At MindTap Learning Hub, we believe that <strong>every child can learn</strong> when taught the right way.
-Our philosophy is centered on understanding — not cramming.
-</p>
-<p>
-We break complex concepts into simple, relatable ideas, encourage questions, and build confidence step-by-step.
-Academic excellence is nurtured through consistency, encouragement, and structure.
-</p>
+<p>We believe every student can excel when taught with patience, structure, and understanding.</p>
 </div>
 </section>
 
-<section id="faq" class="faq-section">
+<section id="faq">
 <h2>Frequently Asked Questions</h2>
 
 <div class="faq-item">
   <h4>How long is a session?</h4>
-  <p>Each session typically lasts 1 hour for primary & secondary students, 90 minutes for university students.</p>
+  <p>1 hour for primary & secondary students, 90 minutes for university students.</p>
 </div>
 
 <div class="faq-item">
   <h4>Do you offer trial lessons?</h4>
-  <p>Yes, we provide a free diagnostic session to assess learning needs and level.</p>
+  <p>Yes, a free diagnostic session is available.</p>
 </div>
 
 <div class="faq-item">
-  <h4>What ages do you teach?</h4>
-  <p>Students from primary school to university level.</p>
-</div>
-
-<div class="faq-item">
-  <h4>Do you offer online and home lessons?</h4>
-  <p>Yes, flexible options available for both online and in-home tutoring.</p>
-</div>
-
-<div class="faq-item">
-  <h4>How are tutors vetted?</h4>
-  <p>All tutors are thoroughly screened for qualifications, teaching experience, and effectiveness.</p>
+  <h4>Online or home lessons?</h4>
+  <p>We offer both.</p>
 </div>
 </section>
 
-<section id="pricing" class="pricing">
+<section id="pricing">
 <h2>Pricing (Monthly)</h2>
-<ul>
-  <li>
-    Primary & Secondary Students: 
-    <select id="class-level">
-      <option value="">Select Class Level</option>
-      <option value="90,000">Primary 1-3: ₦90,000</option>
-      <option value="100,000">Primary 4-6: ₦100,000</option>
-      <option value="110,000">JSS 1-3: ₦110,000</option>
-      <option value="120,000">SS 1-3: ₦120,000</option>
-    </select>
-    <div id="price-display"></div>
-  </li>
-  <li>University Students: ₦150,000 per month (4 sessions)</li>
-  <li>Trial/Diagnostic Session: Free</li>
-  <li>Discounts for multiple siblings or packages available</li>
-</ul>
-</section>
 
-<section id="challenges" class="challenges">
-<h2>Learning Challenges & Our Solutions</h2>
-<div class="card">
-  <p><strong>Challenge:</strong> Difficulty understanding concepts</p>
-  <p><strong>Solution:</strong> Step-by-step explanation, practical examples, and personalized guidance.</p>
-</div>
-<div class="card">
-  <p><strong>Challenge:</strong> Exam anxiety & lack of confidence</p>
-  <p><strong>Solution:</strong> Mock exams, feedback sessions, and structured revision to build confidence.</p>
-</div>
-<div class="card">
-  <p><strong>Challenge:</strong> Irregular practice & homework completion</p>
-  <p><strong>Solution:</strong> Structured study plans, monitoring progress, and parental updates.</p>
-</div>
+<select id="class-level">
+  <option value="">Select Class Level</option>
+  <option value="90,000">Primary 1–3</option>
+  <option value="100,000">Primary 4–6</option>
+  <option value="110,000">JSS 1–3</option>
+  <option value="120,000">SS 1–3</option>
+</select>
+<div id="price-display"></div>
+
+<p><strong>University Students:</strong> ₦150,000 per month</p>
 </section>
 
 <section id="contact">
-<h2>Register Your Ward / Book a Session</h2>
-<form action="https://formspree.io/f/mjgkzpvv" method="POST" class="card" onsubmit="alert('Thank you! Your request has been submitted.');">
-  <input type="text" name="name" placeholder="Parent Full Name" required><br><br>
-  <input type="email" name="email" placeholder="Email Address" required><br><br>
-  <input type="tel" name="phone" placeholder="Phone Number" required><br><br>
-  <input type="text" name="student" placeholder="Student Name & Class" required><br><br>
-  <select name="lesson_type" required>
-    <option value="">Preferred Lesson Type</option>
-    <option value="Home Lesson">Home Lesson</option>
-    <option value="Online Lesson">Online Lesson</option>
-  </select><br><br>
-  <textarea name="message" placeholder="Additional Info / Learning Goals" required></textarea><br><br>
-  <button class="btn">Submit Request</button>
-</form>
-</section>
-
-<section id="tutor" class="tutor-section">
-<h2>Become a Tutor</h2>
-<p>Join MindTap Learning Hub and help students excel.</p>
-<form action="mailto:mindtapconsult@gmail.com" method="POST" class="card" onsubmit="alert('Thank you! Your tutor application has been submitted.');">
-  <input type="text" name="tutor_name" placeholder="Full Name" required><br><br>
-  <input type="email" name="tutor_email" placeholder="Email Address" required><br><br>
-  <input type="tel" name="tutor_phone" placeholder="Phone Number" required><br><br>
-  <textarea name="tutor_experience" placeholder="Brief Teaching Experience & Subjects" required></textarea><br><br>
-  <button class="btn">Apply as Tutor</button>
+<h2>Register Your Ward</h2>
+<form action="https://formspree.io/f/mjgkzpvv" method="POST" class="card">
+  <input type="text" name="name" placeholder="Parent Name" required><br><br>
+  <input type="email" name="email" placeholder="Email" required><br><br>
+  <textarea name="message" placeholder="Learning needs" required></textarea><br><br>
+  <button class="btn">Submit</button>
 </form>
 </section>
 
@@ -323,46 +233,16 @@ Academic excellence is nurtured through consistency, encouragement, and structur
 <h2>Testimonials</h2>
 
 <div class="testimonial-slide active">
-  <p>"MindTap transformed my child’s understanding of Math. Lessons are clear, practical, and fun!"</p>
+  <p>"MindTap transformed my child’s confidence in Math."</p>
   <h5>- Mrs. Funke A.</h5>
 </div>
 
 <div class="testimonial-slide">
-  <p>"The tutors are patient and experienced. My WAEC results exceeded my expectations!"</p>
+  <p>"Excellent tutors and real results."</p>
   <h5>- Chukwudi O.</h5>
 </div>
 
-<div class="testimonial-slide">
-  <p>"I love how MindTap breaks down complex concepts into simple steps. My child now enjoys learning!"</p>
-  <h5>- Aisha K.</h5>
-</div>
-
-<div class="testimonial-slide">
-  <p>"Excellent online and home lessons. Truly reliable and result-oriented." </p>
-  <h5>- Mr. Emeka L.</h5>
-</div>
-
-<div class="testimonial-slide">
-  <p>"The academic support here is unmatched. My JSS student improved dramatically in Science!"</p>
-  <h5>- Mrs. Chidera N.</h5>
-</div>
-
-<div class="testimonial-slide">
-  <p>"Friendly, professional, and flexible. MindTap tutors build confidence, not just grades." </p>
-  <h5>- Ahmed S.</h5>
-</div>
-
-<div class="testimonial-slide">
-  <p>"Booking and communication are seamless. My child is motivated and performing better every week." </p>
-  <h5>- Mrs. Tola A.</h5>
-</div>
-
-<div class="testimonial-slide">
-  <p>"Highly recommended! Structured lessons, clear explanations, and real results." </p>
-  <h5>- David I.</h5>
-</div>
-
-<div class="carousel-controls">
+<div style="text-align:center;margin-top:1rem;">
   <button onclick="prevTestimonial()">Prev</button>
   <button onclick="nextTestimonial()">Next</button>
 </div>
@@ -383,48 +263,31 @@ Academic excellence is nurtured through consistency, encouragement, and structur
 </a>
 
 <script>
-// Founder image upload preview
-const founderInput = document.getElementById('upload-founder-img');
-const founderImg = document.getElementById('founder-img');
-
-founderInput.addEventListener('change', function(e){
-  const file = e.target.files[0];
-  if(file){
-    const reader = new FileReader();
-    reader.onload = function(ev){
-      founderImg.src = ev.target.result;
-    }
-    reader.readAsDataURL(file);
-  }
-});
-
-// Testimonial carousel
+// Testimonials
 let slideIndex = 0;
 const slides = document.querySelectorAll('.testimonial-slide');
 
 function showSlide(n){
-  slides.forEach((slide,i)=>slide.classList.remove('active'));
+  slides.forEach(s=>s.classList.remove('active'));
   slides[n].classList.add('active');
 }
 
 function nextTestimonial(){
-  slideIndex = (slideIndex+1) % slides.length;
+  slideIndex = (slideIndex + 1) % slides.length;
   showSlide(slideIndex);
 }
 
 function prevTestimonial(){
-  slideIndex = (slideIndex-1+slides.length) % slides.length;
+  slideIndex = (slideIndex - 1 + slides.length) % slides.length;
   showSlide(slideIndex);
 }
 
-// Dynamic pricing display
+// Pricing display FIXED
 const classSelect = document.getElementById('class-level');
 const priceDisplay = document.getElementById('price-display');
 
 classSelect.addEventListener('change', function(){
-  const val = this.value;
-  if(val) priceDisplay.textContent = `Monthly Price: ₦${val}`;
-  else priceDisplay.textContent = '';
+  priceDisplay.textContent = this.value ? `Monthly Price: ₦${this.value}` : '';
 });
 </script>
 
