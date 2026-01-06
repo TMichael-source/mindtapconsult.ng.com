@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MindTap Learning Hub | Trusted Tutors in Abuja</title>
+<title>MindTap Learning Hub | Trusted Home & Online Tutors in Abuja</title>
 
-<meta name="description" content="MindTap Learning Hub provides premium Math & Science tutoring in Abuja. Home & online lessons, exam preparation, trusted tutors.">
-<meta name="keywords" content="Math tutor Abuja, Science tutor Abuja, WAEC tutor, JAMB tutor, Home lessons Abuja">
+<meta name="description" content="MindTap Learning Hub offers trusted Math & Science tutoring in Abuja. Founded by an experienced educator with a proven exam success record.">
+<meta name="keywords" content="Math tutor Abuja, Science tutor Abuja, Home lessons Abuja, WAEC tutor, JAMB tutor, online tutoring">
 <meta name="author" content="MindTap Learning Hub">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -23,18 +23,21 @@
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
 body{background:var(--light);color:#1e293b;line-height:1.7;}
-section{padding:4rem 1.5rem;max-width:1200px;margin:auto;}
-h2{text-align:center;margin-bottom:2.5rem;color:var(--primary);}
-.card{background:#fff;padding:2rem;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.08);}
+a{text-decoration:none;color:inherit;}
 
 header{
   background:var(--primary);
   color:#fff;
   padding:1rem 2rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
   position:sticky;
   top:0;
+  z-index:1000;
 }
-.logo{font-size:1.5rem;font-weight:700;color:var(--accent);}
+.logo{font-weight:700;font-size:1.4rem;color:var(--accent);}
+nav ul{list-style:none;display:flex;gap:1.5rem;}
 
 .hero{
   min-height:90vh;
@@ -45,9 +48,11 @@ header{
   justify-content:center;
   text-align:center;
   color:#fff;
+  padding:2rem;
 }
-.hero h1{font-size:clamp(2.3rem,4vw,3.2rem);}
-.hero p{max-width:720px;margin:1.5rem auto;}
+.hero h1{font-size:clamp(2.2rem,4vw,3.2rem);}
+.hero p{max-width:700px;margin:1.5rem auto;}
+
 .btn{
   background:var(--accent);
   color:#fff;
@@ -55,30 +60,44 @@ header{
   border-radius:30px;
   font-weight:700;
   display:inline-block;
+  transition:0.3s;
+}
+.btn:hover{background:#d97706;}
+
+section{padding:4rem 1.5rem;max-width:1200px;margin:auto;}
+section h2{text-align:center;margin-bottom:2.5rem;color:var(--primary);}
+
+.card{
+  background:#fff;
+  padding:2rem;
+  border-radius:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  margin-bottom:2rem;
 }
 
-/* GRID */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;}
+.about-founder, .faq-section, .pricing, .tutor-section, .challenges, .testimonial-carousel{margin-bottom:4rem;}
 
-/* FORMS */
-input, select, textarea{
-  width:100%;
-  padding:1rem;
-  margin-bottom:1rem;
-  border-radius:10px;
-  border:1px solid #cbd5e1;
+.philosophy{
+  background:var(--primary);
+  color:#fff;
+  padding:3rem;
+  border-radius:20px;
+  margin-top:2rem;
 }
-button{border:none;cursor:pointer}
 
-/* FOOTER */
 footer{
   background:var(--dark);
   color:#fff;
   padding:3rem 1.5rem;
+  text-align:center;
 }
-.socials a{margin-right:1rem;font-size:1.5rem;color:var(--accent);}
 
-/* WHATSAPP */
+.socials a{
+  margin-right:1rem;
+  font-size:1.5rem;
+  color:var(--accent);
+}
+
 .whatsapp-float{
   position:fixed;
   bottom:20px;
@@ -92,7 +111,42 @@ footer{
   align-items:center;
   justify-content:center;
   font-size:2rem;
+  transition:0.3s;
 }
+.whatsapp-float:hover{transform:scale(1.1);}
+
+.faq-item{margin-bottom:1.5rem;}
+.faq-item h4{color:var(--accent);}
+.pricing ul{list-style:disc;padding-left:1.5rem;}
+
+.testimonial-carousel{
+  position:relative;
+  max-width:900px;
+  margin:auto;
+  overflow:hidden;
+  border-radius:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+.testimonial-slide{
+  display:none;
+  padding:2rem;
+  background:#fff;
+  text-align:center;
+}
+.testimonial-slide.active{display:block;}
+.testimonial-slide p{font-style:italic;}
+.testimonial-slide h5{margin-top:1rem;color:var(--primary);}
+.carousel-controls{text-align:center;margin-top:1rem;}
+.carousel-controls button{
+  background:var(--accent);
+  border:none;
+  padding:0.5rem 1rem;
+  margin:0 0.25rem;
+  color:#fff;
+  border-radius:5px;
+  cursor:pointer;
+}
+.carousel-controls button:hover{background:#d97706;}
 </style>
 </head>
 
@@ -100,111 +154,202 @@ footer{
 
 <header>
   <div class="logo">MindTap Learning Hub</div>
+  <nav>
+    <ul>
+      <li><a href="#founder">Founder</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#tutor">Tutor Login</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+    </ul>
+  </nav>
 </header>
 
 <section class="hero">
   <div>
     <h1>Building Academic Confidence That Lasts</h1>
-    <p>Trusted home & online tutoring for children and students preparing for Nigerian and international exams.</p>
-    <a href="#parent-form" class="btn">Book Diagnostic Session</a>
+    <p>Expert-led Math & Science tutoring for primary, secondary and university students in Abuja.</p>
+    <a href="#contact" class="btn">Book Free Consultation</a>
   </div>
 </section>
 
-<!-- CHALLENGES -->
-<section>
-<h2>Challenges Students Face</h2>
-<div class="grid">
-  <div class="card">Poor foundation in Math & Science</div>
-  <div class="card">Fear of exams and low confidence</div>
-  <div class="card">Large classroom attention gaps</div>
-  <div class="card">Lack of structured revision plans</div>
-</div>
-</section>
+<section id="founder">
+<h2>Meet the Founder</h2>
 
-<!-- SOLUTIONS -->
-<section>
-<h2>How MindTap Solves These</h2>
-<div class="grid">
-  <div class="card">One-on-one personalised teaching</div>
-  <div class="card">Diagnostic assessment before lessons</div>
-  <div class="card">Carefully matched tutors</div>
-  <div class="card">Progress tracking & parent feedback</div>
-</div>
-</section>
+<div class="about-founder">
+  <div>
+    <h3>Michael Tope Olaseigbe</h3>
+    <p><strong>Founder & Academic Director, MindTap Learning Hub</strong></p>
 
-<!-- PRICING -->
-<section>
-<h2>Lesson Pricing</h2>
-<div class="grid">
-  <div class="card">
-    <h3>Home Lessons</h3>
-    <p><strong>₦8,000 – ₦12,000</strong> per session</p>
-  </div>
-  <div class="card">
-    <h3>Online Lessons</h3>
-    <p><strong>₦5,000 – ₦8,000</strong> per session</p>
+    <p>
+      Michael Tope Olaseigbe is a graduate of <strong>Pure Chemistry</strong> from the
+      <strong>Department of Chemistry, Faculty of Science, Ekiti State University, Ado-Ekiti, Nigeria</strong>.
+    </p>
+
+    <p>
+      With over <strong>six years of hands-on teaching experience</strong>, he has successfully prepared
+      students for major external examinations including <strong>Common Entrance, WAEC, NECO, and JAMB</strong>,
+      helping learners not only pass but excel with confidence.
+    </p>
+
+    <p>
+      His work is defined by patience, clarity, and measurable academic results, earning the trust
+      of parents and students across different learning levels.
+    </p>
   </div>
 </div>
-<p style="text-align:center;margin-top:1rem;">Final pricing depends on class level and subject.</p>
+
+<div class="philosophy">
+<h3>Teaching Philosophy</h3>
+<p>
+At MindTap Learning Hub, we believe that <strong>every child can learn</strong> when taught the right way.
+Our philosophy is centered on understanding — not cramming.
+</p>
+<p>
+We break complex concepts into simple, relatable ideas, encourage questions, and build confidence step-by-step.
+Academic excellence is nurtured through consistency, encouragement, and structure.
+</p>
+</div>
 </section>
 
-<!-- FAQ -->
-<section>
+<section id="faq" class="faq-section">
 <h2>Frequently Asked Questions</h2>
-<div class="card">
-<p><strong>How long is a lesson?</strong><br>Each session lasts 60–90 minutes.</p><br>
-<p><strong>Do you offer trial lessons?</strong><br>Yes. A diagnostic session helps us assess the student before full enrolment.</p><br>
-<p><strong>What ages do you teach?</strong><br>Primary, secondary and university levels.</p><br>
-<p><strong>Online or home lessons?</strong><br>We offer both. Parents choose what works best.</p>
+
+<div class="faq-item">
+  <h4>How long is a session?</h4>
+  <p>Each session typically lasts 1 hour for primary & secondary students, 90 minutes for university students.</p>
+</div>
+
+<div class="faq-item">
+  <h4>Do you offer trial lessons?</h4>
+  <p>Yes, we provide a free diagnostic session to assess learning needs and level.</p>
+</div>
+
+<div class="faq-item">
+  <h4>What ages do you teach?</h4>
+  <p>Students from primary school to university level.</p>
+</div>
+
+<div class="faq-item">
+  <h4>Do you offer online and home lessons?</h4>
+  <p>Yes, flexible options available for both online and in-home tutoring.</p>
+</div>
+
+<div class="faq-item">
+  <h4>How are tutors vetted?</h4>
+  <p>All tutors are thoroughly screened for qualifications, teaching experience, and effectiveness.</p>
 </div>
 </section>
 
-<!-- PARENT FORM -->
-<section id="parent-form">
-<h2>Register Your Child</h2>
-<form action="https://formspree.io/f/mjgkzpvv" method="POST" class="card">
-<input type="text" name="parent_name" placeholder="Parent Full Name" required>
-<input type="tel" name="phone" placeholder="Phone / WhatsApp" required>
-<input type="text" name="student" placeholder="Student Name & Class" required>
-<select name="lesson_type" required>
-<option value="">Lesson Type</option>
-<option>Home Lesson</option>
-<option>Online Lesson</option>
-</select>
-<textarea name="message" placeholder="Academic concerns or goals" required></textarea>
-<input type="hidden" name="_subject" value="New Student Registration">
-<button class="btn">Submit & Get Confirmation</button>
+<section id="pricing" class="pricing">
+<h2>Pricing (Monthly)</h2>
+<ul>
+  <li>Primary & Secondary Students: ₦60,000 per month (4 sessions)</li>
+  <li>University Students: ₦90,000 per month (4 sessions)</li>
+  <li>Trial/Diagnostic Session: Free</li>
+  <li>Discounts for multiple siblings or packages available</li>
+</ul>
+</section>
+
+<section id="challenges" class="challenges">
+<h2>Learning Challenges & Our Solutions</h2>
+<div class="card">
+  <p><strong>Challenge:</strong> Difficulty understanding concepts</p>
+  <p><strong>Solution:</strong> Step-by-step explanation, practical examples, and personalized guidance.</p>
+</div>
+<div class="card">
+  <p><strong>Challenge:</strong> Exam anxiety & lack of confidence</p>
+  <p><strong>Solution:</strong> Mock exams, feedback sessions, and structured revision to build confidence.</p>
+</div>
+<div class="card">
+  <p><strong>Challenge:</strong> Irregular practice & homework completion</p>
+  <p><strong>Solution:</strong> Structured study plans, monitoring progress, and parental updates.</p>
+</div>
+</section>
+
+<section id="contact">
+<h2>Register Your Ward / Book a Session</h2>
+<form action="https://formspree.io/f/mjgkzpvv" method="POST" class="card" onsubmit="alert('Thank you! Your request has been submitted.');">
+  <input type="text" name="name" placeholder="Parent Full Name" required><br><br>
+  <input type="email" name="email" placeholder="Email Address" required><br><br>
+  <input type="tel" name="phone" placeholder="Phone Number" required><br><br>
+  <input type="text" name="student" placeholder="Student Name & Class" required><br><br>
+  <select name="lesson_type" required>
+    <option value="">Preferred Lesson Type</option>
+    <option value="Home Lesson">Home Lesson</option>
+    <option value="Online Lesson">Online Lesson</option>
+  </select><br><br>
+  <textarea name="message" placeholder="Additional Info / Learning Goals" required></textarea><br><br>
+  <button class="btn">Submit Request</button>
 </form>
 </section>
 
-<!-- TUTOR FORM -->
-<section>
-<h2>Become a MindTap Tutor</h2>
-<p style="text-align:center;">All tutors are vetted, trained and monitored for quality.</p>
-<form action="https://formspree.io/f/mjgkzpvv" method="POST" class="card">
-<input type="text" name="tutor_name" placeholder="Full Name" required>
-<input type="email" name="email" placeholder="Email Address" required>
-<input type="text" name="qualification" placeholder="Qualification & Subjects" required>
-<textarea name="experience" placeholder="Teaching experience" required></textarea>
-<input type="hidden" name="_subject" value="Tutor Application">
-<button class="btn">Apply as Tutor</button>
+<section id="tutor" class="tutor-section">
+<h2>Become a Tutor</h2>
+<p>Join MindTap Learning Hub and help students excel.</p>
+<form action="mailto:mindtapconsult@gmail.com" method="POST" class="card" onsubmit="alert('Thank you! Your tutor application has been submitted.');">
+  <input type="text" name="tutor_name" placeholder="Full Name" required><br><br>
+  <input type="email" name="tutor_email" placeholder="Email Address" required><br><br>
+  <input type="tel" name="tutor_phone" placeholder="Phone Number" required><br><br>
+  <textarea name="tutor_experience" placeholder="Brief Teaching Experience & Subjects" required></textarea><br><br>
+  <button class="btn">Apply as Tutor</button>
 </form>
+</section>
+
+<section id="testimonials" class="testimonial-carousel">
+<h2>Testimonials</h2>
+<div class="testimonial-slide active">
+  <p>"MindTap transformed my child’s understanding of Math. Lessons are clear and fun!"</p>
+  <h5>- Mrs. Funke A.</h5>
+</div>
+<div class="testimonial-slide">
+  <p>"Excellent tutors and structured lessons. My WAEC results were beyond expectation!"</p>
+  <h5>- Chukwudi O.</h5>
+</div>
+<div class="testimonial-slide">
+  <p>"Professional, patient, and results-driven. Highly recommended for serious learners."</p>
+  <h5>- Aisha K.</h5>
+</div>
+<div class="carousel-controls">
+  <button onclick="prevTestimonial()">Prev</button>
+  <button onclick="nextTestimonial()">Next</button>
+</div>
 </section>
 
 <footer>
 <p>© 2026 MindTap Learning Hub | Abuja, Nigeria</p>
-<p>Email: mindtapconsult@gmail.com</p>
 <div class="socials">
   <a href="https://wa.me/2348103795347" target="_blank"><i class="fab fa-whatsapp"></i></a>
-  <a href="https://instagram.com/YOURPAGE" target="_blank"><i class="fab fa-instagram"></i></a>
-  <a href="https://tiktok.com/@YOURPAGE" target="_blank"><i class="fab fa-tiktok"></i></a>
-  <a href="https://facebook.com/YOURPAGE" target="_blank"><i class="fab fa-facebook"></i></a>
+  <a href="https://instagram.com/mindtapconsult" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://tiktok.com/@mindtapconsult" target="_blank"><i class="fab fa-tiktok"></i></a>
+  <a href="https://facebook.com/mindtapconsult" target="_blank"><i class="fab fa-facebook"></i></a>
 </div>
 </footer>
 
 <a href="https://wa.me/2348103795347" class="whatsapp-float" target="_blank">
 <i class="fab fa-whatsapp"></i>
 </a>
+
+<script>
+let slideIndex = 0;
+const slides = document.querySelectorAll('.testimonial-slide');
+
+function showSlide(n){
+  slides.forEach((slide,i)=>slide.classList.remove('active'));
+  slides[n].classList.add('active');
+}
+
+function nextTestimonial(){
+  slideIndex = (slideIndex+1) % slides.length;
+  showSlide(slideIndex);
+}
+
+function prevTestimonial(){
+  slideIndex = (slideIndex-1+slides.length) % slides.length;
+  showSlide(slideIndex);
+}
+</script>
 
 </body>
 </html>
