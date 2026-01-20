@@ -2,29 +2,47 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>MindTap Consult | Trusted Premium Home & Online Tutors </title> 
+<title>MindTap Consult | Trusted Premium Home & Online Tutors</title> 
 
 <meta name="description" content="MindTap Consult offers trusted tutoring in a wide range of subjects in Abuja. Founded by an experienced educator with a proven success record.">
-<meta name="keywords" content="Math tutor Abuja, Science tutor Abuja, Accounting tutor Abuja, Biology tutor Abuja, Commerce tutor Abuja, IELTS, GCE, NABTEB, Home lessons Abuja, online tutoring">
+<meta name="keywords" content="Tutoring Abuja, Home lessons Abuja, Online tutoring Nigeria, WAEC, NECO, JAMB, IELTS, GCE">
 <meta name="author" content="MindTap Consult">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
+/* ================== CORE RESET & MOBILE FIX ================== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Montserrat',sans-serif;
+}
+
+html, body{
+  width:100%;
+  overflow-x:hidden; /* FIX: prevents sideways swipe overlap */
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#f8fafc;
+  color:#1e293b;
+  line-height:1.7;
+  -webkit-overflow-scrolling:touch;
+}
+
+/* ================== VARIABLES ================== */
 :root{
   --primary:#0f172a;
   --accent:#f59e0b;
-  --light:#f8fafc;
   --dark:#020617;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
-body{background:var(--light);color:#1e293b;line-height:1.7;}
-a{text-decoration:none;color:inherit;}
-
+/* ================== HEADER ================== */
 header{
   background:var(--primary);
   color:#fff;
@@ -36,13 +54,39 @@ header{
   top:0;
   z-index:1000;
 }
-.logo{font-weight:700;font-size:1.4rem;color:var(--accent);}
-nav ul{list-style:none;display:flex;gap:1.5rem;}
 
+/* LOGO AREA – replace logo.png with your real logo */
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.logo img{
+  height:40px;
+  width:auto;
+}
+.logo span{
+  font-weight:700;
+  font-size:1.3rem;
+  color:var(--accent);
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:1.5rem;
+}
+nav a{color:#fff;text-decoration:none;font-weight:600;}
+
+/* ================== HERO ================== */
 .hero{
   min-height:90vh;
-  background:linear-gradient(rgba(2,6,23,.75),rgba(2,6,23,.75)),
-  url("https://images.unsplash.com/photo-1588072432836-e10032774350") center/cover;
+  background:
+    linear-gradient(rgba(2,6,23,.75),rgba(2,6,23,.75)),
+    url("https://images.unsplash.com/photo-1588072432836-e10032774350");
+  background-size:cover;
+  background-position:center;
+  background-attachment:scroll; /* FIX: avoids mobile lag */
   display:flex;
   align-items:center;
   justify-content:center;
@@ -50,9 +94,11 @@ nav ul{list-style:none;display:flex;gap:1.5rem;}
   color:#fff;
   padding:2rem;
 }
-.hero h1{font-size:clamp(2.2rem,4vw,3.2rem);}
-.hero p{max-width:700px;margin:1.5rem auto;}
 
+.hero h1{font-size:clamp(2.2rem,4vw,3.2rem);}
+.hero p{max-width:720px;margin:1.5rem auto;}
+
+/* ================== BUTTON ================== */
 .btn{
   background:var(--accent);
   color:#fff;
@@ -64,17 +110,27 @@ nav ul{list-style:none;display:flex;gap:1.5rem;}
 }
 .btn:hover{background:#d97706;}
 
-section{padding:4rem 1.5rem;max-width:1200px;margin:auto;}
-section h2{text-align:center;margin-bottom:2.5rem;color:var(--primary);}
+/* ================== SECTIONS ================== */
+section{
+  padding:4rem 1.5rem;
+  max-width:1200px;
+  margin:auto;
+}
+section h2{
+  text-align:center;
+  margin-bottom:2.5rem;
+  color:var(--primary);
+}
 
+/* ================== CARD ================== */
 .card{
   background:#fff;
   padding:2rem;
   border-radius:15px;
   box-shadow:0 10px 30px rgba(0,0,0,.08);
-  margin-bottom:2rem;
 }
 
+/* ================== FOUNDER ================== */
 .philosophy{
   background:var(--primary);
   color:#fff;
@@ -83,6 +139,37 @@ section h2{text-align:center;margin-bottom:2.5rem;color:var(--primary);}
   margin-top:2rem;
 }
 
+/* ================== SERVICES (UPDATED COPY ONLY) ================== */
+#services .pricing-copy{
+  max-width:800px;
+  margin:auto;
+  text-align:center;
+  background:#fff;
+  padding:3rem;
+  border-radius:20px;
+  box-shadow:0 12px 30px rgba(0,0,0,.1);
+}
+
+#services ul{
+  text-align:left;
+  margin-top:1.5rem;
+}
+#services li{
+  margin-bottom:0.8rem;
+}
+
+/* ================== TESTIMONIALS ================== */
+.testimonial-carousel{max-width:900px;margin:auto;}
+.testimonial-slide{
+  display:none;
+  padding:2rem;
+  background:#fff;
+  text-align:center;
+  border-radius:15px;
+}
+.testimonial-slide.active{display:block;}
+
+/* ================== FOOTER ================== */
 footer{
   background:var(--dark);
   color:#fff;
@@ -96,6 +183,7 @@ footer{
   color:var(--accent);
 }
 
+/* ================== WHATSAPP FLOAT ================== */
 .whatsapp-float{
   position:fixed;
   bottom:20px;
@@ -109,37 +197,19 @@ footer{
   align-items:center;
   justify-content:center;
   font-size:2rem;
-  transition:0.3s;
 }
-.whatsapp-float:hover{transform:scale(1.1);}
 
-.faq-item{margin-bottom:1.5rem;}
-.faq-item h4{color:var(--accent);}
-
-.testimonial-carousel{
-  max-width:900px;
-  margin:auto;
+/* ================== FORMS ================== */
+input, textarea{
+  width:100%;
+  padding:0.9rem;
+  border-radius:10px;
+  border:1px solid #ccc;
 }
-.testimonial-slide{
-  display:none;
-  padding:2rem;
-  background:#fff;
-  text-align:center;
-  border-radius:15px;
-}
-.testimonial-slide.active{display:block;}
 
-#price-display{
-  font-weight:bold;
-  margin-top:10px;
-}
-input, select, textarea{width:100%; padding:0.8rem; border-radius:10px; border:1px solid #ccc;}
-
-/* NEW: Hover for Services Cards */
-#services div > div:hover{
-  transform: translateY(-5px);
-  box-shadow:0 12px 25px rgba(0,0,0,.15);
-  transition:0.3s;
+/* ================== MOBILE NAV STACK ================== */
+@media(max-width:768px){
+  nav ul{flex-wrap:wrap;gap:1rem;}
 }
 </style>
 </head>
@@ -147,13 +217,15 @@ input, select, textarea{width:100%; padding:0.8rem; border-radius:10px; border:1
 <body>
 
 <header>
-  <div class="logo">MindTap Consult</div>
+  <div class="logo">
+    <!-- LOGO IMAGE PLACEHOLDER -->
+    <img src="Images/logo.png" alt="MindTap Consult Logo">
+    <span>MindTap Consult</span>
+  </div>
   <nav>
     <ul>
       <li><a href="#founder">Founder</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#pricing">Pricing</a></li>
       <li><a href="#contact">Register</a></li>
       <li><a href="#tutor">Become a Tutor</a></li>
       <li><a href="#testimonials">Testimonials</a></li>
@@ -164,7 +236,7 @@ input, select, textarea{width:100%; padding:0.8rem; border-radius:10px; border:1
 <section class="hero">
   <div>
     <h1>Building Academic Confidence That Lasts</h1>
-    <p>Expert-led tutoring for primary, secondary, and university students in a wide range of subjects including Accounting, Biology, Commerce, Math, English, and more.</p>
+    <p>Premium home & online tutoring across multiple subjects and examinations.</p>
     <a href="https://wa.me/2348103795347" class="btn">Chat on WhatsApp</a>
   </div>
 </section>
@@ -174,163 +246,66 @@ input, select, textarea{width:100%; padding:0.8rem; border-radius:10px; border:1
 
 <div style="display:flex; gap:2rem; flex-wrap:wrap; align-items:center;">
   <div style="max-width:350px;">
-    <img src="Images/founder.jpg" alt="Michael Tope Olaseigbe"
-     style="width:100%; border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,.15);">
+    <img src="Images/founder.jpg" alt="Michael Tope Olaseigbe" style="width:100%; border-radius:20px;">
   </div>
-
   <div>
     <h3>Michael Tope Olaseigbe</h3>
-    <p><strong>Founder & Academic Director, MindTap Consult</strong></p>
-    <p>Graduate of Pure Chemistry with over six years of experience preparing students for WAEC, NECO, JAMB, GCE, NABTEB, IELTS, and other local & international exams.</p>
-    <p>Known for clarity, patience, and consistent academic results.</p>
+    <p><strong>Founder & Academic Director</strong></p>
+    <p>Graduate of Pure Chemistry with over six years of experience preparing students for local and international examinations.</p>
   </div>
 </div>
 
 <div class="philosophy">
-<h3>Teaching Philosophy</h3>
-<p>Every child can succeed when learning is simplified, structured, and encouraging.</p>
+  <h3>Teaching Philosophy</h3>
+  <p>Every learner can excel with structured guidance, patience, and clarity.</p>
 </div>
 </section>
 
-<!-- ENHANCED: Services Section -->
+<!-- UPDATED PRICING COPY (STRUCTURE MAINTAINED) -->
 <section id="services">
-<h2>Our Services & Prices </h2>
+<h2>Our Lesson Fees</h2>
 
-<div style="display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:center; margin-top:2rem;">
+<div class="pricing-copy">
+<p>Our tutoring fees are structured based on:</p>
+<ul>
+  <li>Student’s class level</li>
+  <li>Subject(s)</li>
+  <li>Exam type</li>
+  <li>Lesson frequency</li>
+  <li>Location (home or online)</li>
+</ul>
 
-  <div style="background:#fff; padding:2rem; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,.1); flex:1 1 250px; max-width:280px;">
-    <h3 style="color:var(--primary); margin-bottom:1rem;">Grade 5</h3>
-    <p>All Core Subjects</p>
-    <p style="font-weight:bold; margin-top:0.5rem; color:var(--accent);">₦90,000 / Month</p>
-  </div>
+<p style="margin-top:1.5rem;"><strong>Typical Starting Rates:</strong></p>
+<ul>
+  <li>Primary School (Grades 3–6): Custom pricing</li>
+  <li>Junior Secondary (JSS): Custom pricing</li>
+  <li>Senior Secondary (SSS): Custom pricing</li>
+  <li>Common Entrance Preparation: Structured packages available</li>
+  <li>WAEC / NECO / JAMB Prep: Custom packages based on subject & timeline</li>
+</ul>
 
-  <div style="background:#fff; padding:2rem; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,.1); flex:1 1 250px; max-width:280px;">
-    <h3 style="color:var(--primary); margin-bottom:1rem;">Grade 6</h3>
-    <p>All Core Subjects</p>
-    <p style="font-weight:bold; margin-top:0.5rem; color:var(--accent);">₦100,000 / Month</p>
-  </div>
-
-  <div style="background:#fff; padding:2rem; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,.1); flex:1 1 250px; max-width:280px;">
-    <h3 style="color:var(--primary); margin-bottom:1rem;">JSS 1-3</h3>
-    <p>Math, Science, English, Accounting, Commerce</p>
-    <p style="font-weight:bold; margin-top:0.5rem; color:var(--accent);">₦120,000 / Month</p>
-  </div>
-
-  <div style="background:#fff; padding:2rem; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,.1); flex:1 1 250px; max-width:280px;">
-    <h3 style="color:var(--primary); margin-bottom:1rem;">SSS 1-3</h3>
-    <p>Math, Science, Accounting, Commerce, Biology</p>
-    <p style="font-weight:bold; margin-top:0.5rem; color:var(--accent);">₦150,000 / Month</p>
-  </div>
-
-  <div style="background:#fff; padding:2rem; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,.1); flex:1 1 250px; max-width:280px;">
-    <h3 style="color:var(--primary); margin-bottom:1rem;">WAEC / NECO / NABTEB</h3>
-    <p>All Subjects</p>
-    <p style="font-weight:bold; margin-top:0.5rem; color:var(--accent);">₦180,000 / Month</p>
-  </div>
-
-  <div style="background:#fff; padding:2rem; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,.1); flex:1 1 250px; max-width:280px;">
-    <h3 style="color:var(--primary); margin-bottom:1rem;">JAMB / GCE</h3>
-    <p>Math, English, Science</p>
-    <p style="font-weight:bold; margin-top:0.5rem; color:var(--accent);">₦200,000 / Month</p>
-  </div>
-
-  <div style="background:#fff; padding:2rem; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,.1); flex:1 1 250px; max-width:280px;">
-    <h3 style="color:var(--primary); margin-bottom:1rem;">IELTS / External Exams</h3>
-    <p>English, Math</p>
-    <p style="font-weight:bold; margin-top:0.5rem; color:var(--accent);">₦220,000 / Month</p>
-  </div>
-
-</div>
-</section>
-
-<section id="contact">
-<h2>Register Your Ward</h2>
-<form action="https://formspree.io/f/mjgkzpvv" method="POST" class="card">
-  <input type="text" name="name" placeholder="Parent Name" required><br><br>
-  <input type="email" name="email" placeholder="Email" required><br><br>
-  <textarea name="message" placeholder="Learning needs / Subjects" required></textarea><br><br>
-  <button class="btn">Submit</button>
-</form>
-</section>
-
-<section id="tutor">
-<h2>Become a Tutor</h2>
-<form action="https://formspree.io/f/mjgkzpvv" method="POST" class="card">
-  <input type="text" name="tutor_name" placeholder="Full Name" required><br><br>
-  <input type="email" name="tutor_email" placeholder="Email" required><br><br>
-  <input type="text" name="subjects" placeholder="Subjects you teach" required><br><br>
-  <textarea name="experience" placeholder="Briefly describe your experience" required></textarea><br><br>
-  <button class="btn">Submit</button>
-</form>
-</section>
-
-<section id="testimonials" class="testimonial-carousel">
-<h2>What Parents & Students Say</h2>
-
-<div class="testimonial-slide active">
-  <p>"My son moved from struggling to scoring top grades. MindTap Consult is a blessing."</p>
-  <h5>- Mrs. Funke A.</h5>
-</div>
-
-<div class="testimonial-slide">
-  <p>"Professional, patient, and results-driven. Tutoring was excellent."</p>
-  <h5>- Mr. Chukwudi O.</h5>
-</div>
-
-<div class="testimonial-slide">
-  <p>"The tutor explains concepts in a way my daughter finally understands."</p>
-  <h5>- Mrs. Aisha K.</h5>
-</div>
-
-<div class="testimonial-slide">
-  <p>"Flexible lessons and consistent feedback. Highly recommended."</p>
-  <h5>- Mr. Emeka L.</h5>
-</div>
-
-<div class="testimonial-slide">
-  <p>"My IELTS score improved significantly after just two months."</p>
-  <h5>- Samuel T.</h5>
-</div>
-
-<div class="testimonial-slide">
-  <p>"Disciplined teaching style with real care for students’ progress."</p>
-  <h5>- Mrs. Tola A.</h5>
-</div>
-
-<div class="testimonial-slide">
-  <p>"Reliable online lessons. My child is now confident in multiple subjects."</p>
-  <h5>- Ahmed S.</h5>
-</div>
-
-<div class="testimonial-slide">
-  <p>"Clear explanations, structured lessons, and visible improvement."</p>
-  <h5>- David I.</h5>
-</div>
-
-<div style="text-align:center;margin-top:1rem;">
-  <button onclick="prevTestimonial()">Prev</button>
-  <button onclick="nextTestimonial()">Next</button>
+<p style="margin-top:1.5rem;font-weight:600;">📌 Final fees are confirmed after a free academic assessment.</p>
+<a href="#contact" class="btn" style="margin-top:1.5rem;">Book a Free Consultation</a>
 </div>
 </section>
 
 <footer>
 <p>© 2026 MindTap Consult | Abuja, Nigeria</p>
 <div class="socials">
-  <a href="https://wa.me/2348103795347" target="_blank"><i class="fab fa-whatsapp"></i></a>
-  <a href="https://instagram.com/mindtapconsult" target="_blank"><i class="fab fa-instagram"></i></a>
-  <a href="https://facebook.com/mindtapconsult" target="_blank"><i class="fab fa-facebook"></i></a>
-  <a href="https://tiktok.com/@mindtapconsult" target="_blank"><i class="fab fa-tiktok"></i></a>
+  <a href="https://wa.me/2348103795347"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://instagram.com/mindtapconsult"><i class="fab fa-instagram"></i></a>
+  <a href="https://facebook.com/mindtapconsult"><i class="fab fa-facebook"></i></a>
+  <a href="https://tiktok.com/@mindtapconsult"><i class="fab fa-tiktok"></i></a>
 </div>
 </footer>
 
-<a href="https://wa.me/2348103795347" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/2348103795347" class="whatsapp-float">
 <i class="fab fa-whatsapp"></i>
 </a>
 
 <script>
 let slideIndex = 0;
 const slides = document.querySelectorAll('.testimonial-slide');
-
 function showSlide(n){
   slides.forEach(s=>s.classList.remove('active'));
   slides[n].classList.add('active');
@@ -339,16 +314,8 @@ function nextTestimonial(){
   slideIndex = (slideIndex + 1) % slides.length;
   showSlide(slideIndex);
 }
-function prevTestimonial(){
-  slideIndex = (slideIndex - 1 + slides.length) % slides.length;
-  showSlide(slideIndex);
-}
-
-// Auto-slide every 5 seconds
 setInterval(nextTestimonial, 5000);
 </script>
 
 </body>
 </html>
-
-
