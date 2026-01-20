@@ -154,6 +154,21 @@ footer{
   justify-content:center;
   font-size:2rem;
 }
+
+/* TESTIMONIAL CAROUSEL */
+.testimonial-slide{
+  display:none;
+  text-align:center;
+  animation:fade 0.8s ease-in-out;
+}
+.testimonial-slide.active{
+  display:block;
+}
+
+@keyframes fade{
+  from{opacity:0;}
+  to{opacity:1;}
+}
 </style>
 </head>
 
@@ -207,7 +222,6 @@ footer{
 </div>
 </section>
 
-<!-- ✅ REGISTER SECTION -->
 <section id="contact">
 <h2>Student Registration</h2>
 <div class="card">
@@ -221,7 +235,6 @@ footer{
 </div>
 </section>
 
-<!-- ✅ TUTOR SECTION -->
 <section id="tutor">
 <h2>Become a Tutor</h2>
 <div class="card">
@@ -235,24 +248,39 @@ footer{
 </div>
 </section>
 
-<!-- ✅ TESTIMONIALS -->
 <section id="testimonials">
 <h2>What Parents & Students Say</h2>
 
 <div class="card testimonial-slide active">
-<p>"MindTap Consult transformed my child’s confidence."</p>
-<strong>— Parent, Abuja</strong>
+<p>“My son’s confidence improved within weeks. The tutor was patient and very professional.”</p>
+<strong>— Mrs. Funke A., Gwarinpa</strong>
 </div>
 
 <div class="card testimonial-slide">
-<p>"Excellent tutors and structured teaching."</p>
-<strong>— WAEC Candidate</strong>
+<p>“MindTap Consult helped my daughter prepare for her IGCSE. The improvement was clear.”</p>
+<strong>— Mr. Adewale T., Maitama</strong>
 </div>
 
 <div class="card testimonial-slide">
-<p>"Highly recommended for serious exam preparation."</p>
-<strong>— JAMB Student</strong>
+<p>“Structured lessons, regular feedback, and real academic progress.”</p>
+<strong>— Mrs. Zainab S., Wuse II</strong>
 </div>
+
+<div class="card testimonial-slide">
+<p>“Best home tutor experience we’ve had in Abuja so far.”</p>
+<strong>— Mr. Chinedu O., Apo</strong>
+</div>
+
+<div class="card testimonial-slide">
+<p>“The online lessons were smooth and very engaging.”</p>
+<strong>— Samuel D., JAMB Candidate</strong>
+</div>
+
+<div class="card testimonial-slide">
+<p>“Clear explanations and strong exam focus. Highly recommended.”</p>
+<strong>— Mrs. Tola K., Asokoro</strong>
+</div>
+
 </section>
 
 <footer>
@@ -281,7 +309,7 @@ slides[n].classList.add('active');
 setInterval(()=>{
 slideIndex = (slideIndex + 1) % slides.length;
 showSlide(slideIndex);
-}, 4000);
+}, 4500);
 </script>
 
 </body>
